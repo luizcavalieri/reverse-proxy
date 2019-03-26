@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+  luizcavalieri_blog_network:
+    external:
+      name: luizcavalieri-blog_luizcavalieri_blog_network
+
+services:
+  proxy:
+    build: ./
+    networks:
+      - luizcavalieri_blog_network
+    ports:
+      - 80:2368
+
